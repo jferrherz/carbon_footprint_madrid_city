@@ -1,0 +1,41 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+$if(title)$
+\makeatletter
+\twocolumn[
+\maketitle
+
+\begin{@twocolumnfalse}
+
+\centering\begin{minipage}{\dimexpr\paperwidth-6.5cm}
+\begin{abstract}
+\begin{normalsize}
+% Write your abstract here ----------------------------------------------------
+\vspace{1em}
+Urban economies bear a significant responsibility in climate change, but estimating scope-3 emissions of urban areas is challenging due to the lack of city-level input-output tables and air emissions accounts. These limitations have led to various bottom-up and top-down strategies to address the information gap, often relying on the adoption of stringent domestic input-output modeling assumptions that limit considerably the analytical scope and granularity of the results. This paper presents the most rigorous quantification of the 3-scope carbon footprint of the city of Madrid to date, a full 2010-2021 series with a 28-industry and 47-country breakdown. The methodology consists in, firstly, integrating municipal-level economic data with regional supply and use tables to construct a series of city-specific input-output tables and to incorporate them into the FIGARO global multiregional input-output framework; secondly, constructing the first air emissions account for the city of Madrid, including direct emissions by households; thirdly,deriving a final consumption expenditure vector from household surveys. Our analysis reveals that the city's carbon footprint in 2021 was 17,447 ktCO2e for GDP and 13,920 ktCO2e for households. Only 15\% originated within the city limits, 34\% from the rest of Spain, and 51\% from the rest of the world. The analytical possibilities offered by these data are considerably broad. We find significant emissions inequality among residents, with the top 20\% of the equivalized spending distribution emitting 4.8 times more than the bottom 20\%. %
+Structural decomposition analysis shows that while efficiency improvements and technological advancements contributed to emissions reduction, these gains were largely offset by increases in consumption demand. 
+Notably, our simulations indicate that reshaping consumption patterns of higher-income households could potentially reduce emissions by up to 26\%, which is similar to the potential emissions savings from a substantial shift modality in private transport. The study underscores the need for consumption-oriented mitigation strategies and highlights the importance of addressing emissions inequality in urban climate action plans.
+\end{normalsize}
+\end{abstract}
+$if(keywords)$
+\begin{flushleft}
+\setlength\parindent{30pt}{
+\hspace{\parindent}\small\textbf{Keywords}: {$for(keywords)$$keywords$$sep$, $endfor$}.}
+\end{flushleft}
+$endif$
+\end{minipage}
+
+$if(JEL)$
+\centering\begin{minipage}{\dimexpr\paperwidth-8cm}
+\begin{flushleft}
+{\setlength\parindent{30pt}
+\hspace{\parindent}\small\textbf{JEL classification}: {$for(JEL)$$JEL$$sep$, $endfor$}.}
+\end{flushleft}
+\end{minipage}
+$endif$
+\vspace{3em}
+\end{@twocolumnfalse}]
+\makeatother
+$endif$
