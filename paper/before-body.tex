@@ -1,0 +1,39 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+$if(title)$
+\makeatletter
+\twocolumn[
+\maketitle
+
+\begin{@twocolumnfalse}
+
+\centering\begin{minipage}{\dimexpr\paperwidth-6.5cm}
+\begin{abstract}
+\begin{normalsize}
+% Write your abstract here ----------------------------------------------------
+\vspace{1em}
+Urban economies are central to addressing climate change, yet quantifying scope-3 emissions at the city level remains a significant challenge due to the absence of municipal input-output tables and detailed air emissions accounts. This study bridges this gap by presenting a comprehensive 2010–2021 analysis of Madrid's 3-scope carbon footprint, utilizing an innovative methodology that integrates municipal economic data, regional supply and use tables, and the FIGARO global multiregional input-output framework. Additionally, it constructs the first air emissions account for Madrid and employs household budget survey data to derive a detailed consumption expenditure vector. The findings reveal Madrid's 2021 carbon footprint to be 17,447 $ktCO_2e$ for GDP-related activities and 13,921 $ktCO_2e$ for household consumption, with per capita emissions of 4,194 $kgCO_2e$ in 2021, down from 5,908 $kgCO_2e$ in 2010. Only 15\% of emissions originated within the city, while 34\% were from the rest of Spain and 51\% from international supply chains. The analysis highlights stark emissions inequalities among residents, with the top 20\% of households emitting 4.8 times more than the bottom 20\%. Structural decomposition analysis attributes emissions reductions to technological advancements and efficiency improvements, although these gains were partially offset by increased consumption demand. Crucially, simulations suggest that reshaping consumption patterns among higher-income households could reduce emissions by up to 26\%, comparable to the savings achievable through significant shifts in private transport. These findings underscore the importance of incorporating consumption-focused mitigation strategies and addressing emissions inequalities in urban climate action plans. These findings provide a robust basis for advancing consumption-focused mitigation strategies and addressing emissions inequalities in Madrid, offering valuable insights for urban carbon footprint estimation and climate action plans that can be replicated in alignment with the C40 Cities Climate Leadership Group’s objectives.
+\end{normalsize}
+\end{abstract}
+$if(keywords)$
+\begin{flushleft}
+\setlength\parindent{30pt}{
+\hspace{\parindent}\small\textbf{Keywords}: {$for(keywords)$$keywords$$sep$, $endfor$}.}
+\end{flushleft}
+$endif$
+\end{minipage}
+
+$if(JEL)$
+\centering\begin{minipage}{\dimexpr\paperwidth-8cm}
+\begin{flushleft}
+{\setlength\parindent{30pt}
+\hspace{\parindent}\small\textbf{JEL classification}: {$for(JEL)$$JEL$$sep$, $endfor$}.}
+\end{flushleft}
+\end{minipage}
+$endif$
+\vspace{3em}
+\end{@twocolumnfalse}]
+\makeatother
+$endif$
